@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zest In Ladies PG Whitefield Rent Details Form</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #FFF9C4;
+      color: #3E2723;
+      overflow-x: hidden;
+    }
+    .hero {
+      background: linear-gradient(135deg, #FFC107 0%, #FFEB3B 100%);
+      padding: 2rem 1rem;
+    }
+    .hero .title {
+      font-weight: 600;
+      color: #3E2723;
+      font-size: 1.5rem;
+    }
+    .input, .select select {
+      border-color: #FFB300;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    .button.is-primary {
+      background-color: #FFC107;
+      color: #3E2723;
+      transition: all 0.3s ease;
+    }
+    .button.is-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .button.is-danger {
+      background-color: #FF5722;
+    }
+    .moving-svg {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      animation: float 8s ease-in-out infinite;
+      z-index: -1;
+      opacity: 0.6;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-30px) rotate(10deg); }
+    }
+    #svg1 { top: 10%; left: 5%; fill: #FF9800; }
+    #svg2 { top: 70%; right: 5%; fill: #4CAF50; }
+    #svg3 { top: 40%; left: 10%; fill: #2196F3; animation-delay: 1s; }
+    #svg4 { top: 20%; right: 10%; fill: #9C27B0; animation-delay: 2s; }
+    #svg5 { top: 60%; left: 15%; fill: #FF5722; animation-delay: 1.5s; }
+    #svg6 { top: 30%; right: 20%; fill: #4CAF50; animation-delay: 2.5s; }
+    #svg7 { bottom: 10%; left: 30%; fill: #2196F3; animation-delay: 3.5s; }
+    #svg8 { top: 50%; right: 25%; fill: #9C27B0; animation-delay: 4.5s; }
+    #svg9 { top: 15%; left: 20%; fill: #FF9800; animation-delay: 3s; }
+    #svg10 { top: 45%; right: 15%; fill: #4CAF50; animation-delay: 2.8s; }
+    #svg11 { bottom: 25%; left: 35%; fill: #FF5722; animation-delay: 4s; }
+    #svg12 { top: 55%; right: 30%; fill: #2196F3; animation-delay: 3.2s; }
+    #svg13 { top: 65%; left: 25%; fill: #9C27B0; animation-delay: 2.3s; }
+    #svg14 { bottom: 35%; right: 20%; fill: #FFC107; animation-delay: 2.7s; }
+    #svg15 { top: 25%; left: 45%; fill: #4CAF50; animation-delay: 3.9s; }
+    #svg16 { top: 50%; right: 5%; fill: #FF9800; animation-delay: 3.6s; }
+    #svg17 { bottom: 20%; left: 15%; fill: #2196F3; animation-delay: 2.5s; }
+    #svg18 { top: 40%; right: 25%; fill: #FF5722; animation-delay: 4.2s; }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .input:focus, .select select:focus {
+      box-shadow: 0 0 0 2px #FFC107;
+    }
+
+    .success-animation {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 249, 196, 0.95);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .party-svg {
+      width: 150px;
+      height: 150px;
+      animation: party 2s infinite, bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-20px); }
+    }
+
+    .footer {
+      background: linear-gradient(135deg, #FFC107 0%, #FFEB3B 100%);
+      padding: 3rem 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .footer-section {
+      padding: 1rem;
+    }
+
+    .footer-section h3 {
+      color: #3E2723;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .footer-section p, .footer-section a {
+      color: #5D4037;
+      margin-bottom: 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+      color: #3E2723;
+      text-decoration: underline;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      color: #3E2723;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.2);
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(62, 39, 35, 0.2);
+      color: #3E2723;
+    }
+    </style>
+</head>
+<body>
+  <div style="position: relative;">
+    <div class="moving-svg" id="svg1">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+        <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" fill="#FF9800" />
+      </svg>
+    </div>
+  </div>
+
+  <div class="moving-svg" id="svg2">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+      <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z" fill="#4CAF50" />
+    </svg>
+  </div>
+
+  <div class="moving-svg" id="svg3">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+      <path d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8ZM19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8ZM5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.  25Z" fill="#2196F3" />
+    </svg>
+  </div>
+
+  <div class="moving-svg" id="svg4">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+      <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z" fill="#9C27B0" />
+    </svg>
+  </div>
+
+  <div class="moving-svg" id="svg5">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+      <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z" fill="#FF5722" />
+    </svg>
+  </div>
+
+  <div class="moving-svg" id="svg6">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+      <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z" fill="#4CAF50" />
+    </svg>
+  </div>
+
+  <div class="moving-svg" id="svg7">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+      <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z" fill="#2196F3" />
+    </svg>
+  </div>
+
+  <div class="moving-svg" id="svg8">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+      <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z" fill="#9C27B0" />
+    </svg>
+  </div>
+
+  <div class="moving-svg" id="svg9">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+      <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z" fill="#FF9800" />
+    </svg>
+  </div>
+
+  <div class="moving-svg" id="svg10">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+      <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z" fill="#4CAF50" />
+    </svg>
+  </div>
+
+  <div class="moving-svg" id="svg11">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+      <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z" fill="#FF5722" />
+    </svg>
+  </div>
+
+  <div class="moving-svg" id="svg12">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+      <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z" fill="#2196F3" />
+    </svg>
+  </div>
+
+  <div class="moving-svg" id="svg13">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+      <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z" fill="#9C27B0" />
+    </svg>
+  </div>
+
+  <div class="moving-svg" id="svg14">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+      <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z" fill="#FFC107" />
+    </svg>
+  </div>
+
+  <div class="moving-svg" id="svg15">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+      <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z" fill="#4CAF50" />
+    </svg>
+  </div>
+
+  <div class="moving-svg" id="svg16">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+      <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z" fill="#FF9800" />
+    </svg>
+  </div>
+
+  <div class="moving-svg" id="svg17">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+      <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z" fill="#2196F3" />
+    </svg>
+  </div>
+
+  <div class="moving-svg" id="svg18">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+      <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z" fill="#FF5722" />
+    </svg>
+  </div>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title has-text-centered">Zest In Ladies PG Whitefield Rent Details Form 🏠</h1>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="form-container">
+      <form id="rentDetailsForm">
+        <div class="field">
+          <label class="label">Name 🧑‍💼</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Name" name="Name" required>
+          </div>
+        </div>
+    
+        <div class="field">
+          <label class="label">Email 📧</label>
+          <div class="control">
+            <input class="input" type="email" placeholder="Your Email" name="Email" required>
+          </div>
+        </div>
+    
+        <div class="field">
+          <label class="label">Mobile Number 📱</label>
+          <div class="control">
+            <input class="input" type="tel" placeholder="Mobile No" name="Mobile No" pattern="[0-9]{10}" required>
+          </div>
+        </div>
+    
+        <div class="field">
+          <label class="label">Room Number 🚪</label>
+          <div class="control">
+            <input class="input" type="number" placeholder="Room No" name="Room No" min="1" max="999" required>
+          </div>
+        </div>
+    
+        <div class="field">
+          <label class="label">Block Name 🏢</label>
+          <div class="select is-fullwidth">
+            <select name="Building Name" required>
+              <option value="" disabled selected>Select Name of the Block</option>
+              <option value="Zest In A Block">Zest In A Block</option>
+              <option value="Zest In B Block">Zest In B Block</option>
+              <option value="Zest In C Block">Zest In C Block</option>
+            </select>
+          </div>
+        </div>
+    
+        <div class="field">
+          <label class="label">Rent 💸</label>
+          <div class="control">
+            <input class="input" type="number" placeholder="Rent" name="Rent" id="rent" required>
+          </div>
+        </div>
+    
+        <div class="field">
+          <label class="label">Payment 💳</label>
+          <div class="select is-fullwidth">
+            <select name="Payment" required>
+              <option value="" disabled selected>Mode of Payment</option>
+              <option value="Online Transaction(UPI/SCAN)">Online Transaction</option>
+              <option value="Cash">Cash</option>
+            </select>
+          </div>
+        </div>
+    
+        <div class="field">
+          <label class="label">Paid To 💵</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Ex-Rajesh" name="Paid" required>
+          </div>
+        </div>
+    
+        <div class="field">
+          <label class="label">Comments 💬</label>
+          <div class="control">
+            <textarea class="textarea" placeholder="Any additional comments" name="Comments"></textarea>
+          </div>
+        </div>
+    
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-primary" type="submit" id="submit-button">Submit</button>
+          </div>
+          <div class="control">
+            <button class="button is-danger" type="reset">Cancel</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="success-animation">
+    <svg class="party-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFC107">
+      <path d="M14.53 1.45L13.45 2.53L15.05 4.13C15.27 4.38 15.38 4.67 15.38 5S15.27 5.64 15.05 5.86L11.5 9.47L12.5 10.55L16.13 6.94C16.66 6.35 16.92 5.7 16.92 5C16.92 4.3 16.66 3.64 16.13 3.05L14.53 1.45M10.55 3.47L9.47 4.55L10.08 5.11C10.3 5.33 10.41 5.63 10.41 6S10.3 6.67 10.08 6.89L9.47 7.45L10.55 8.53L11.11 7.92C11.64 7.29 11.91 6.61 11.91 5.91C11.91C11.91 5.21 11.64 4.53 11.11 3.94L10.55 3.47M21 5.06C20.31 5.06 19.67 5.33 19.08 5.86L13.45 11.5L14.53 12.5L20.11 6.94C20.36 6.69 20.66 6.56 21 6.56S21.64 6.69 21.89 6.94L22.5 7.55L23.53 6.47L22.97 5.86C22.38 5.33 21.72 5.06 21 5.06M7 8L2 22L16 17L7 8M19 17V19H5V17H19Z" />
+    </svg>
+    <h2 class="title is-2 mt-4 has-text-centered">Your Rent Payment was Successful! 🎉</h2>
+    <p class="subtitle is-4 mb-4 has-text-centered">Please check your email for the invoice.</p>
+    <button class="button is-primary is-large" onclick="hideSuccessAnimation()">OK</button>
+  </div>
+
+  <script>
+    document.getElementById('rentDetailsForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var formData = new FormData(this);
+      fetch('https://script.google.com/macros/s/AKfycbzBbJHMkYGdRWAj9-tuGLqqyMzeojt1csmY13oAzj1FrP6pSyD6StS7KlGi31vQJts/exec', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) {
+          showSuccessAnimation();
+        } else {
+          console.error('Error:', response.statusText);
+          alert('There was an error submitting the form. Please try again.');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error submitting the form. Please try again.');
+      });
+    });
+
+    function showSuccessAnimation() {
+      document.querySelector('.success-animation').style.display = 'flex';
+      createConfetti();
+    }
+
+    function createConfetti() {
+      for (let i = 0; i < 50; i++) {
+        const confetti = document.createElement('div');
+        confetti.style.cssText = `
+          position: fixed;
+          width: 10px;
+          height: 10px;
+          background-color: ${['#FFC107', '#FFEB3B', '#4CAF50', '#2196F3', '#9C27B0'][Math.floor(Math.random() * 5)]};
+          left: ${Math.random() * 100}vw;
+          top: -20px;
+          opacity: 0;
+          transform: translateY(0);
+          animation: confetti-fall ${3 + Math.random() * 2}s linear forwards;
+          z-index: 2001;
+        `;
+        document.body.appendChild(confetti);
+
+        confetti.addEventListener('animationend', () => confetti.remove());
+      }
+    }
+
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes confetti-fall {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(100vh) rotate(720deg);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+    function hideSuccessAnimation() {
+      document.querySelector('.success-animation').style.display = 'none';
+      document.getElementById('rentDetailsForm').reset();
+    }
+
+    document.querySelectorAll('.input, .select select, .textarea').forEach(element => {
+      element.addEventListener('focus', function() {
+        this.style.transform = 'scale(1.02)';
+        this.style.transition = 'all 0.3s ease';
+      });
+      element.addEventListener('blur', function() {
+        this.style.transform = 'scale(1)';
+      });
+    });
+  </script>
+</body>
+</html>
+```
+```
+
+<footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Zest In PG</h3>
+        <p>Zest In PG provides premium accommodation for ladies with modern amenities, security, and comfort. Our PGs are located in prime locations across Bangalore.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Our Locations</h3>
+        <p>Whitefield</p>
+        <p>Electronic City</p>
+        <p>Marathahalli</p>
+        <p>Bellandur</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>📞 +91 9876543210</p>
+        <p>📧 info@zestinpg.com</p>
+        <p>🏢 123, Whitefield Main Road</p>
+        <p>Bangalore - 560066</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Amenities</h3>
+        <p>✨ 24/7 Security</p>
+        <p>🍽️ Home-style Food</p>
+        <p>🌐 High-speed WiFi</p>
+        <p>🧺 Laundry Service</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <p><a href="#">Home</a></p>
+        <p><a href="#">Rooms</a></p>
+        <p><a href="#">Facilities</a></p>
+        <p><a href="#">Book Now</a></p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Connect With Us</h3>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">📱</a>
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2024 Zest In PG. All rights reserved.</p>
+    </div>
+  </footer>
